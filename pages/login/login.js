@@ -11,24 +11,14 @@ Page({
     userInfo: wx.getStorageSync('userInfo')
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  fetchUser: function() {
-    return wx.BaaS.auth.getCurrentUser();
-  },
-
-  onLoad: async function () {
-    // wx.BaaS.auth.getCurrentUser().then(
-    //   (res) => {
-    //     getApp().globalData.userInfo = 
-    //   }
-    const userInfo = await this.fetchUser();
-    app.globalData.userInfo = userInfo;
-    this.setData({userInfo})
-    console.log("pageuserdata",this.data.userInfo)
-    console.log("globaluserdata",app.globalData.userInfo)
-  },
+  // IMPORTANT: Dylan's async log-in exmaple
+  // onLoad: async function () {
+  //   const userInfo = await this.fetchUser();
+  //   app.globalData.userInfo = userInfo;
+  //   this.setData({userInfo})
+  //   console.log("pageuserdata",this.data.userInfo)
+  //   console.log("globaluserdata",app.globalData.userInfo)
+  // },
 
   userInfoHandler: function (data) {
     let page = this
@@ -39,10 +29,7 @@ Page({
           userInfo: res
         })
         wx.setStorageSync('userInfo', res)
-        getApp().globalData.userInfo = res
-      },
-      (err) => {
-
+        // getApp().globalData.userInfo = res
       }
     )
   },

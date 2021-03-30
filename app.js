@@ -26,7 +26,7 @@ App({
       (res) => {
         console.log("currentUser", res)
         wx.setStorageSync('userInfo', res)
-        this.globalData.userInfo = res
+        // this.globalData.userInfo = res
         // console.log(this.globalData.userInfo)
       }
     )
