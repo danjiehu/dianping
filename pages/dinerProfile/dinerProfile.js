@@ -4,18 +4,17 @@ let app = getApp()
 Page({
 
   data: {
-    pageUser: app.globalData.userInfo,
+    pageUser: wx.getStorageSync('userInfo'),
     pageRestaurant:{},
     pageReviews:[],
     inputValue: null
   },
 
   onLoad: function (event) { 
-    
     let page = this
-    page.setData({
-      pageUser: app.globalData.userInfo
-    })
+    // page.setData({
+    //   pageUser: app.globalData.userInfo
+    // })
 
     console.log("onload", event)
     console.log("onloadrif", event.rid) 
@@ -51,7 +50,7 @@ Page({
   },
 
   goLogin: function(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/login/login'
     })
   },
