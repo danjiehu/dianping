@@ -1,0 +1,36 @@
+/**index.wxss**/
+
+.card {
+  background-color: #ebebeb;
+  margin: 10px;
+  width:100vw;
+  text-align: center;
+  padding: 20px;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.description {
+  font-weight: 400;
+}
+
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */

@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view>All Restaurants List</view>
+
+  <view class="card" wx:for="{{restaurants}}" wx:for-item="restaurant" bindtap="toDinerProfile" data-rid="{{restaurant.id}}">
+      <view class="name">{{restaurant.name}} </view>
+      <view class="description">{{restaurant.description}}</view>
+  </view>
+
+<!-- <button ontap="toProfile">Profile</button> -->
+  
+</view>

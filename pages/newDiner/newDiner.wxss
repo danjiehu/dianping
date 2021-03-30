@@ -1,0 +1,32 @@
+/* pages/newDiner/newDiner.wxss */
+
+.container_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  font-size: larger;
+  font-weight: 300;
+}
+
+.input {
+  background-color: #dedcdc;
+  width: 80vw;
+  padding: 20rpx 10rpx;
+  margin: 10rpx 0rpx;
+  font-size: medium;
+  border-radius: 2px;
+}
+
+.input_title {
+  font-size: large;
+  font-weight: 300;
+}
+
+image {
+  width: 150px;
+  height: 180px;
+}

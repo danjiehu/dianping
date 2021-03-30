@@ -1,0 +1,41 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "homesliceprofile",
+          "pathName": "pages/dinerProfile/dinerProfile",
+          "query": "rid=605c8e3cbc331f354be15be5",
+          "scene": null
+        },
+        {
+          "name": "newDiner",
+          "pathName": "pages/newDiner/newDiner",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<text>login</text>
+
+
+
+<view wx:if="{{userInfo}}">
+  <view> welcome, {{userInfo.nickname}}</view>
+  <image src="{{userInfo.avatar}}"></image>
+</view>
+
+<view wx:else>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" type="primary">LOG IN HERE</button>
+</view>
+
+<button bindtap="goDinerProfile">go to Diner Profile</button>

@@ -1,0 +1,24 @@
+<!--pages/dinerProfile/dinerProfile.wxml-->
+<view>{{pageRestaurant.name}} </view>
+<view>{{pageRestaurant.description}}</view>
+<image src="{{pageRestaurant.img.path}}" mode="aspectFit"></image>
+<view wx:for="{{pageReviews}}" wx:for-item="review">
+  {{review.content}}
+</view> 
+
+<view wx:if="{{pageUser}}">
+  <form bindsubmit="submitReview">
+    <input value='{{inputValue}}' type="text" placeholder="input review here"  style="background-color: smokewhite" name="reviewContent"/>
+    <button form-type="submit" bindtap='clearInputEvent'>Submit</button>
+  </form>
+</view>
+<view wx:else>
+  <button bindtap="goLogin">go to login</button>
+</view>
+
+
+
+
+
+
+<!-- <view class="description">{{restaurant.image}}</view> -->

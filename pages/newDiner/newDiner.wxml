@@ -1,0 +1,26 @@
+<!--pages/newDiner/newDiner.wxml-->
+
+<view class="container_form">
+  <text>Add a New Restaurant</text>
+
+  <form bindsubmit="formSubmit">
+
+    <view class="input_title" style="margin-top: 50px">Name</view>
+    <input name="resName" type="text" class="input" placeholder="What's the name of the restaurant?"/>
+
+    <view class="input_title">Description</view>
+    <input name="resDescription" type="text" class="input" placeholder="Tell us about the restaurant"/>
+
+    <view>
+    <view class="input_title">Images</view>
+    <image src="/images/upload_img.png" mode="aspectFit" bindtap="uploadImage"></image>
+    </view>
+
+    <button form-type="submit" style="margin-top:60px; font-size: large; font-weight: 300;">Submit</button>
+
+  </form>
+
+</view> 
+
+
+
