@@ -73,10 +73,11 @@ Page({
         console.log("chooseImage",res)
         const tempFilePaths = res.tempFilePaths[0]
         console.log(tempFilePaths)
-        this.setData({
-          newResImg: tempFilePaths
-          // console.log('path',this.newResImg)
-        })
+        
+        // this.setData({
+        //   newResImg: tempFilePaths
+        //   console.log('path',this.newResImg)
+        // })
       }
     })
     
