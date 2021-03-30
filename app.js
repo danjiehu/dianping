@@ -1,4 +1,7 @@
 // app.js
+
+let config = require('./key')
+
 App({
   globalData: {
     userInfo: null
@@ -11,8 +14,8 @@ App({
     //让插件帮助完成登录、支付等功能
     wx.BaaS.wxExtend(wx.login, wx.getUserInfo, wx.requestPayment)
 
-    let clientID = '4095e1de147e136c208a'  // 应用名称: {{app_name}}
-    wx.BaaS.init(clientID)
+     // 应用名称: {{app_name}}
+    wx.BaaS.init(config.appKey)
 
     this.fetchUser();
     console.log(this.globalData.userInfo)

@@ -2,7 +2,7 @@
 Page({
 
   data: {
-
+    newResImg: ""
   },
 
   /**
@@ -65,6 +65,21 @@ Page({
 
   uploadImage: function(e) {
     console.log("uploadImage",e)
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success (res) {
+        console.log("chooseImage",res)
+        const tempFilePaths = res.tempFilePaths[0]
+        console.log(tempFilePaths)
+        this.setData({
+          newResImg: tempFilePaths
+          // console.log('path',this.newResImg)
+        })
+      }
+    })
+    
   },
 
   formSubmit: function(e) {
@@ -72,9 +87,11 @@ Page({
     let restaurants = new wx.BaaS.TableObject('restaurants_dhu')
 
     let newRes = restaurants.create()
+
     newRes.set({
       "name": e.detail.value.resName,
-      "description": e.detail.value.resDescription
+      "description": e.detail.value.resDescription,
+      // "img": this.data.tempFilePaths
     })
 
     newRes.save().then(
@@ -84,7 +101,6 @@ Page({
         })
       }
     )
-  },
-
+  }
 
 })
