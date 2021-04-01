@@ -4,7 +4,10 @@ const app = getApp()
 Page({
   data: {
     userInfo: wx.getStorageSync('userInfo'),
-    imagePath: null
+    imagePath: null,
+    selectedAddress: null,
+    resLat: null,
+    resLong: null
   },
 
   // when click upload image, choose image and store file to image data
@@ -59,6 +62,20 @@ Page({
         })
       }
     )
+  },
+
+  chooseLocation: function(){
+    let page = this
+    wx.chooseLocation({
+      success: function(res) {
+        console.log("chooseLocation",res)
+        page.setData({
+          selectedAddress: res.address,
+          resLat: res.latitude,
+          resLong: res.longitude
+        })
+      }
+    })
   }
 
 })

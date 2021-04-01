@@ -3,21 +3,37 @@
 <view class="container_form">
   <text>Add a New Restaurant</text>
 
+  <!-- beiginning of form -->
   <form bindsubmit="formSubmit">
 
-    <view class="input_title" style="margin-top: 50px">Name</view>
+    <!-- res name -->
+    <view class="input_title" style="margin-top: 20px">Name</view>
     <input name="resName" type="text" class="input" placeholder="What's the name of the restaurant?"/>
 
+    <!-- res description -->
     <view class="input_title">Description</view>
     <input name="resDescription" type="text" class="input" placeholder="Tell us about the restaurant"/>
 
+    <!-- res image -->
     <view>
-    <view class="input_title">Images</view>
-    <image src="/images/upload_img.png" mode="aspectFit" bindtap="uploadImage"></image>
+
+      <view class="input_title">Images</view>
+      <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" bindtap="uploadImage"></image>
+      <image wx:else src="/images/upload_img.png" mode="aspectFit" bindtap="uploadImage"></image>
+
     </view>
 
+    <!-- res location -->
+    <view>
+     <view class="input_title" >Location</view>
+     <input class="input" bindfocus="chooseLocation" value="{{selectedAddress}}" placeholder="Click to select address"/>
+     <!-- <button style="font-size: large; font-weight: 300;  margin-left: 0px; margin-top:10px;">Open Map</button> -->
+    </view>
+
+    <!-- submit button -->
     <button form-type="submit" style="margin-top:60px; font-size: large; font-weight: 300;">Submit</button>
 
+  <!-- end of form -->
   </form>
 
 </view> 
