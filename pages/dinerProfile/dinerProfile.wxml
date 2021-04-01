@@ -1,22 +1,44 @@
 <!--pages/dinerProfile/dinerProfile.wxml-->
-<view>{{pageRestaurant.name}} </view>
-<view>{{pageRestaurant.description}}</view>
-<image src="{{pageRestaurant.img.path}}" mode="aspectFit"></image>
-<view wx:for="{{pageReviews}}" wx:for-item="review">
-  {{review.content}}
-</view> 
 
-<view wx:if="{{pageUser}}">
-  <form bindsubmit="submitReview">
-    <input value='{{inputValue}}' type="text" placeholder="input review here"  style="background-color: smokewhite" name="reviewContent"/>
-    <button form-type="submit" bindtap='clearInputEvent'>Submit</button>
-  </form>
+<view class="container_diner">
+
+  <view>
+  <view class="res_name">{{pageRestaurant.name}} </view>
+  <view class="res_description">{{pageRestaurant.description}}</view>
+  <image class="dinerImage" src="{{pageRestaurant.img.path}}" mode="widthFix"></image>
+  </view>
+
+<view class="section_container">
+  <view class="h2">Best Sellers</view>
+  <view wx:for="{{pageMeals}}" wx:for-item="meal">
+    <view>{{meal.name}}</view>
+    <view>¥{{meal.price}}</view>
+    <button style="font-size: large; font-weight: 300; margin: 20rpx 0px">order now</button>
+  </view> 
+  
 </view>
-<view wx:else>
-  <button bindtap="goLogin">go to login</button>
+
+<view class="section_container">
+  <view class="h2">Customer Reviews</view>
+  <view wx:for="{{pageReviews}}" wx:for-item="review">
+    {{review.content}}
+  </view> 
+  
+  <view wx:if="{{pageUser}}">
+    <form bindsubmit="submitReview">
+      <input class="input" value='{{inputValue}}' type="text" placeholder="input review here" name="reviewContent"/>
+      <button style="font-size: large; font-weight: 300; margin: 20rpx 0px" form-type="submit" bindtap='clearInputEvent'>Submit</button>
+    </form>  
+  </view>
+
+  <view wx:else>
+    <button style="font-size: large; font-weight: 300;" bindtap="goLogin">go to login</button>
+  </view>
+
 </view>
 
 
+</view>
 
 
 

@@ -1,1 +1,54 @@
 /* pages/dinerProfile/dinerProfile.wxss */
+
+.container_diner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.res_name {
+  font-weight: 300;
+    font-size: x-large;
+    font-style: italic;
+    box-shadow: inset 0em -1em gold;
+}
+
+.res_description {
+  font-size: large;
+  font-weight: 300;
+  color: #1f1f1f;
+  text-shadow: 1px 1px #38fff5;
+  margin-top: 8rpx;
+  font-style:italic;
+}
+
+.dinerImage {
+  margin-top: 8rpx;
+  
+}
+
+.section_container{
+  margin-top: 24rpx;
+  padding: 16rpx;
+  font-size: medium;
+  font-weight: 300;
+  /* padding: 20rpx; */
+}
+
+.h2 {
+  font-weight: 300;
+  font-size: large;
+  font-style: italic;
+  box-shadow: inset 2em 0.5em gold;
+  width: 60px;
+  margin-bottom: 24rpx;
+}
+
+.input {
+  border: 1rpx solid #a6a6a6;
+  margin-top: 10rpx;
+  padding: 15rpx;
+}
