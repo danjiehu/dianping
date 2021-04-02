@@ -26,7 +26,7 @@
     <!-- res location -->
     <view>
      <view class="input_title" >Location</view>
-     <input class="input" bindfocus="chooseLocation" value="{{selectedAddress}}" placeholder="Click to select address"/>
+     <input class="input" bindtap="chooseLocation" value="{{selectedAddress}}" placeholder="Click to select address"/>
      <!-- <button style="font-size: large; font-weight: 300;  margin-left: 0px; margin-top:10px;">Open Map</button> -->
     </view>
 

@@ -29,7 +29,7 @@ App({
   fetchLocation: function() {
     let page = this
     wx.getLocation({
-      type: 'gcj-02',
+      type: 'gcj02', //don't push dash sign
       success: function(res) {
         console.log("applocation",res)
         page.globalData.lat = res.latitude
