@@ -11,13 +11,19 @@
     "selectedColor": "#000000",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "discover",
+      "text": "Discover",
       "iconPath": "images/home.png",
       "selectedIconPath": "images/home_selected.png"
     },
     {
+      "pagePath": "pages/newDiner/newDiner",
+      "text": "Add New Diner",
+      "iconPath": "images/add.png",
+      "selectedIconPath": "images/add_selected.png"
+    },
+    {
       "pagePath": "pages/login/login",
-      "text": "account",
+      "text": "Account",
       "iconPath": "images/user.png",
       "selectedIconPath": "images/user_selected.png"
     }]

@@ -27,7 +27,11 @@
 
 .dinerImage {
   margin-top: 8rpx;
-  
+  width: 345 px;
+}
+
+map {
+  width: 345 px;
 }
 
 .section_container{

@@ -2,12 +2,23 @@
 
 <view class="container_diner">
 
+<!-- title and description start here -->
   <view>
   <view class="res_name">{{pageRestaurant.name}} </view>
   <view class="res_description">{{pageRestaurant.description}}</view>
   <image class="dinerImage" src="{{pageRestaurant.img.path}}" mode="widthFix"></image>
   </view>
+<!-- title and description end here  -->
 
+<!-- map starts here -->
+<view class="section_container">
+  <view class="h2">Diner Location</view>
+  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}"></map>
+</view>
+<!-- map ends one -->
+
+
+<!-- meal start here -->
 <view class="section_container">
   <view class="h2">Best Sellers</view>
   <view wx:for="{{pageMeals}}" wx:for-item="meal">
@@ -15,9 +26,10 @@
     <view>¥{{meal.price}}</view>
     <button style="font-size: large; font-weight: 300; margin: 20rpx 0px">order now</button>
   </view> 
-  
 </view>
+<!-- meal ends here -->
 
+<!-- reivew starts here -->
 <view class="section_container">
   <view class="h2">Customer Reviews</view>
   <view wx:for="{{pageReviews}}" wx:for-item="review">
@@ -36,11 +48,6 @@
   </view>
 
 </view>
-
+<!-- review ends here -->
 
 </view>
-
-
-
-
-<!-- <view class="description">{{restaurant.image}}</view> -->

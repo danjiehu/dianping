@@ -9,7 +9,17 @@ Page({
     pageResId: "",
     pageReviews:[],
     inputValue: null,
-    pageMeals: []
+    pageMeals: [],
+    latitude: null,
+    longitude: null,
+    markers: [{
+      iconPath: "/images/marker.png",
+      id: 0,
+      latitude: null,
+      longitude: null,
+      width: 50,
+      height: 50
+    }]
   },
 
   onLoad: function (event) { 
@@ -26,8 +36,20 @@ Page({
     let restaurants = new wx.BaaS.TableObject("restaurants_dhu")
     restaurants.get(event.rid).then(
       (res) => {
-        console.log("now", res)
+        console.log("clicked diner profile whole", res)
         page.setData({pageRestaurant: res.data})
+        page.setData({
+          latitude: res.data.latitude,
+          longitude: res.data.longitude,
+          markers: [{
+            iconPath: "/images/marker.png",
+            id: 0,
+            latitude: res.data.latitude,
+            longitude: res.data.longitude,
+            width: 50,
+            height: 50
+          }]
+        })
       }
     )
 
