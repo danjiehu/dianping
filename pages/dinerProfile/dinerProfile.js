@@ -17,8 +17,14 @@ Page({
       id: 0,
       latitude: null,
       longitude: null,
-      width: 50,
-      height: 50
+      width: 28,
+      height: 40,
+      callout: { 
+        content: "",
+        fontSize: 15, 
+        color: "#000000", 
+        padding: 1
+      }
     }]
   },
 
@@ -27,7 +33,7 @@ Page({
  
     // onload, get and set page restaurant id to page data for later use
     console.log("onload", event)
-    console.log("onloadrif", event.rid) 
+    console.log("onloadrid", event.rid) 
     page.setData({
       pageResId: event.rid
     })
@@ -46,8 +52,14 @@ Page({
             id: 0,
             latitude: res.data.latitude,
             longitude: res.data.longitude,
-            width: 50,
-            height: 50
+            width: 28,
+            height: 40,
+            callout: { 
+              content: res.data.address,
+              fontSize: 15, 
+              color: "#000000", 
+              padding: 1
+            }
           }]
         })
       }
@@ -131,6 +143,16 @@ Page({
     this.setData({
       'inputValue': ''
     })
+  },
+
+  // defining click on map - go to venue function
+  goToVenue: function (res) {
+    console.log("tapping map",res)
+    wx.showToast({
+      title: 'Feature Coming Soon',
+    })
   }
 
 })
+
+

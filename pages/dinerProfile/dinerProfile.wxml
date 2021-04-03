@@ -13,7 +13,7 @@
 <!-- map starts here -->
 <view class="section_container">
   <view class="h2">Diner Location</view>
-  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}"></map>
+  <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" bindmarkertap="goToVenue"></map>
 </view>
 <!-- map ends one -->
 
