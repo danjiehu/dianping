@@ -27,16 +27,19 @@
 
 .dinerImage {
   margin-top: 8rpx;
-  width: 345 px;
+  display: block;
+  width: 100%;
+  /* width: 345 px; */
 }
 
 map {
-  width: 345 px;
+  display: block;
+  width: 100%;
+  height: 30vh;
 }
 
 .section_container{
   margin-top: 24rpx;
-  padding: 16rpx;
   font-size: medium;
   font-weight: 300;
   /* padding: 20rpx; */
