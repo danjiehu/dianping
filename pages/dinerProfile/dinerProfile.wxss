@@ -45,6 +45,34 @@ map {
   /* padding: 20rpx; */
 }
 
+.section_container_meal{
+  display: flex;
+  margin-top: 24rpx;
+  font-size: medium;
+  font-weight: 300;
+  /* padding: 20rpx; */
+}
+
+.add_meal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  height: 50rpx;
+  width: 50rpx;
+  padding:auto 0;
+  border-radius: 50%;
+}
+
+.add_meal image {
+  
+  height: 30rpx;
+  width: 30rpx;
+  display: block;
+  /* margin: 0 auto;
+  padding: 2px 0px; */
+}
+
 .h2 {
   font-weight: 300;
   font-size: large;

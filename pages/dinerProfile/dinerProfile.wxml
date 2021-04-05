@@ -18,14 +18,25 @@
 <!-- map ends one -->
 
 <!-- meal start here -->
-<view class="section_container">
-  <view class="h2">Best Sellers</view>
-  <view wx:for="{{pageMeals}}" wx:for-item="meal">
-    <view>{{meal.name}}</view>
-    <view>¥{{meal.price}}</view>
-    <button style="font-size: large; font-weight: 300; margin: 20rpx 0px">order now</button>
-  </view> 
-</view>
+  <view class="section_container">
+    <view class="h2">Best Sellers</view>
+
+    <view wx:for="{{pageMeals}}" wx:for-item="meal" class="section_container_meal">
+
+      <view>
+        <view>{{meal.name}}</view>
+        <view>¥{{meal.price}}</view>
+      </view>
+      <view>
+        <view class="add_meal" hover-class="add_meal_selected">
+          <image src="/images/plus_white_vector.png" alt="add to cart" mode="widthFix"></image>
+        </view>
+        <!-- <button style="font-size: large; font-weight: 300; margin-right: 10rpx">order now</button> -->
+      </view>
+      
+    </view> 
+
+  </view>
 <!-- meal ends here -->
 
 <!-- reivew starts here -->
