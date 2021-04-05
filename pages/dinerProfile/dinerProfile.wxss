@@ -7,13 +7,14 @@
   justify-content: space-between;
   padding: 50rpx 30rpx;
   box-sizing: border-box;
+  margin: 0px 0px 30px 0px;
 }
 
 .res_name {
   font-weight: 300;
-    font-size: x-large;
-    font-style: italic;
-    box-shadow: inset 0em -1em gold;
+  font-size: x-large;
+  font-style: italic;
+  box-shadow: inset 0em -1em gold;
 }
 
 .res_description {
@@ -29,28 +30,46 @@
   margin-top: 8rpx;
   display: block;
   width: 100%;
-  /* width: 345 px; */
+  border-radius: 5px;
 }
 
 map {
   display: block;
   width: 100%;
   height: 30vh;
+  border-radius: 5px;
 }
 
 .section_container{
-  margin-top: 24rpx;
+  margin-top: 60rpx;
   font-size: medium;
   font-weight: 300;
   /* padding: 20rpx; */
 }
 
-.section_container_meal{
+.section_container_meal {
   display: flex;
-  margin-top: 24rpx;
+  margin-top: 60rpx;
   font-size: medium;
   font-weight: 300;
-  /* padding: 20rpx; */
+  justify-content: space-between;
+  align-items: end;
+}
+
+.section_container_meal image {
+  width: 80px;
+  height: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.meal_card {
+  display: flex;
+}
+
+.meal_name_price {
+  margin-left: 30rpx;
+  font-size: large;
 }
 
 .add_meal {
@@ -65,7 +84,6 @@ map {
 }
 
 .add_meal image {
-  
   height: 30rpx;
   width: 30rpx;
   display: block;
@@ -84,6 +102,8 @@ map {
 
 .input {
   border: 1rpx solid #a6a6a6;
-  margin-top: 10rpx;
+  margin: 10px 0px;
   padding: 15rpx;
+  border-radius: 5px;
 }
+

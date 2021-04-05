@@ -23,15 +23,26 @@
 
     <view wx:for="{{pageMeals}}" wx:for-item="meal" class="section_container_meal">
 
-      <view>
-        <view>{{meal.name}}</view>
-        <view>¥{{meal.price}}</view>
+      <view class="meal_card">
+        <!-- flex item 1 -->
+        <image src="{{meal.meal_img.path}}" alt="meal_img" mode="aspectFit"></image>
+        <!-- flex item 1 -->
+
+        <!-- flex item 2 -->
+        <view class="meal_name_price">
+          <view>{{meal.name}}</view>
+          <view>¥{{meal.price}}</view>
+        </view>
+        <!-- flex item 2 -->
       </view>
+
+      <!-- flex item 3 -->
       <view>
         <view class="add_meal" hover-class="add_meal_selected">
           <image src="/images/plus_white_vector.png" alt="add to cart" mode="widthFix"></image>
         </view>
-        <!-- <button style="font-size: large; font-weight: 300; margin-right: 10rpx">order now</button> -->
+      <!-- flex item 1 -->
+     
       </view>
       
     </view> 
@@ -40,22 +51,23 @@
 <!-- meal ends here -->
 
 <!-- reivew starts here -->
-<view class="section_container">
-  <view class="h2">Customer Reviews</view>
-  <view wx:for="{{pageReviews}}" wx:for-item="review">
-    {{review.content}}
-  </view> 
-  
-  <view wx:if="{{pageUser}}">
-    <form bindsubmit="submitReview">
-      <input class="input" value='{{inputValue}}' type="text" placeholder="input review here" name="reviewContent"/>
-      <button style="font-size: large; font-weight: 300; margin: 20rpx 0px" form-type="submit" bindtap='clearInputEvent'>Submit</button>
-    </form>  
-  </view>
+<view class="section_container container_reviews">
 
-  <view wx:else>
-    <button style="font-size: large; font-weight: 300;" bindtap="goLogin">go to login</button>
-  </view>
+    <view class="h2">Customer Reviews</view>
+    <view wx:for="{{pageReviews}}" wx:for-item="review">
+      {{review.content}}
+    </view> 
+    
+    <view wx:if="{{pageUser}}">
+      <form bindsubmit="submitReview">
+        <input class="input" value='{{inputValue}}' type="text" placeholder="input review here" name="reviewContent"/>
+        <button style="font-size: large; font-weight: 300; margin: 10px auto;" form-type="submit" bindtap='clearInputEvent'>Submit</button>
+      </form>  
+    </view>
+
+    <view wx:else>
+      <button style="font-size: large; font-weight: 300;  margin: 10px auto;" bindtap="goLogin">go to login</button>
+    </view>
 
 </view>
 <!-- review ends here -->
