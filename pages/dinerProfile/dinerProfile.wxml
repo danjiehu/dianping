@@ -1,5 +1,6 @@
 <!--pages/dinerProfile/dinerProfile.wxml-->
 
+<!-- page starts here -->
 <view class="container_diner">
 
 <!-- title and description start here -->
@@ -38,8 +39,8 @@
 
       <!-- flex item 3 -->
       <view>
-        <view class="add_meal" hover-class="add_meal_selected">
-          <image src="/images/plus_white_vector.png" alt="add to cart" mode="widthFix"></image>
+        <view class="add_meal">
+          <image src="/images/plus_white_vector.png" alt="add to cart" mode="widthFix" bindtap="increaseCount" data-meal_id="{{meal.id}}"></image>
         </view>
       <!-- flex item 1 -->
      
@@ -72,4 +73,16 @@
 </view>
 <!-- review ends here -->
 
+
+<!-- cart fload strip starts here -->
+  <view class="checkout_float">
+    <view>Total: ¥{{orderTotal}}</view>
+    <view bindtap="goToOrder">Checkout</view>
+  </view>
+<!-- cart fload strip ends here -->
+
+
+
+
+<!-- page starts here -->
 </view>

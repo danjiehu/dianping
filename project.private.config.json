@@ -33,6 +33,12 @@
         {
           "name": "newDiner",
           "pathName": "pages/newDiner/newDiner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "myOrder",
+          "pathName": "pages/myOrder/myOrder",
           "scene": null
         }
       ]

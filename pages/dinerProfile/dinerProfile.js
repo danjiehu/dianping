@@ -1,14 +1,21 @@
 // pages/dinerProfile/dinerProfile.js
 let app = getApp()
 
-Page({
 
+// start of page object
+Page({
+ 
+  // start of page data
   data: {
     pageUser: wx.getStorageSync('userInfo'),
     pageRestaurant:{},
     pageResId: "",
     pageReviews:[],
     inputValue: null,
+
+    orderTotal: null,
+    pageOrder: [],
+
     pageMeals: [],
     latitude: null,
     longitude: null,
@@ -27,7 +34,18 @@ Page({
       }
     }]
   },
+  // end of page data
 
+
+  // start of goToOrder 
+  goToOrder: function(e){
+    console.log("goToOder",e)
+  },
+  // end of goToOrder
+
+
+
+  // start of onload function
   onLoad: function (event) { 
     let page = this
  
@@ -98,18 +116,26 @@ Page({
       }
     )
   },
+  // end of onload function
 
-  //if user is not logged in
+
+
+  //start of defining goLogin function
   goLogin: function(){
     wx.switchTab({
       url: '/pages/login/login'
     })
   },
+  //end of defining goLogin function
 
-  //if user submit new review
-  //step ONE: create new Review information and save to iFanr
-  //step TWO: iFanr will give save status response, wait for server response
-  //step THREE: once saved to server ok, push response data to page review array (reset page data)
+
+
+
+  // start of defining submit review function
+    //if user submit new review
+    //step ONE: create new Review information and save to iFanr
+    //step TWO: iFanr will give save status response, wait for server response
+    //step THREE: once saved to server ok, push response data to page review array (reset page data)
   submitReview: function(e) {
     let page = this
     console.log("submit",e)
@@ -137,22 +163,74 @@ Page({
 
     )
   },
+  // end of defining submit review function
 
-  // this is to clear input
+
+
+
+  // start of clear input function
   clearInputEvent: function(res) {
     this.setData({
       'inputValue': ''
     })
   },
+  // end of clear input function
 
-  // defining click on map - go to venue function
+
+
+
+  // NOT COMPLETE: start of defining click on map - go to venue function
   goToVenue: function (res) {
     console.log("tapping map",res)
     wx.showToast({
       title: 'Feature Coming Soon',
     })
-  }
+  },
+  // NOT COMPLETE: end of go to venue function
 
+
+  // start of defining increaseCount
+  increaseCount: function(e){
+    
+    console.log("test",e.currentTarget.dataset.meal_id)
+
+    let page = this
+    let pageOrder = page.data.pageOrder
+    let orderMap = new pageOrder.map(i => [i.key, i.val])
+    orderMap.set({
+      id: 1,
+      count: 1
+    })
+    console.log("orderMap",orderMap)
+
+    // if (orderMealType < 1) {
+    //   page.setData({
+    //     pageOrder:[{
+    //       "meal_id": e.currentTarget.dataset.meal_id,
+    //       "meal_count": 1
+    //     }]
+    //   })
+    // }
+    
+
+
+
+    // mealCount = this.data
+
+    // console.log("increaseCount",e)
+    
+    // let count = function(){
+    //   mealCount = mealCount + 1
+    //   return mealCount
+    // }
+    
+  } 
+  // end of defining increaseCount
+
+
+
+
+// end of page object
 })
 
 

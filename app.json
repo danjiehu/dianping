@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/login/login",
     "pages/dinerProfile/dinerProfile",
-    "pages/newDiner/newDiner"
+    "pages/newDiner/newDiner",
+    "pages/myOrder/myOrder"
   ],
   "tabBar": {
     "color": "#C4C4C4",
